@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, setStep } from "../../store/counterSlice";
 
 function Counter() {
-  const { count, step } = useSelector((state) => state.counter);
+  const { count, step } = useSelector((state) => state.counter);// дістає зі store частину нашого state
   const dispatch = useDispatch(); // формує потрібний dispatch
   const handlerIncrement = () => dispatch(increment());//
   const handlerDecrement = () => dispatch(decrement());//
