@@ -12,7 +12,7 @@ useEffect(()=>{ // щоб можно було звернутися до стор
   return (
     <section>
       <h2>Users List</h2>
-      {error && <h3>Error!</h3>}
+      {error && <h3>{JSON.stringify(error)}</h3>}
       {isFetching && <h3>Loading...</h3>}
       {users.map((user, i) => (
         <article key={i}>{JSON.stringify(user)}</article>
